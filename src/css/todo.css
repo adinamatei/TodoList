@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 5%;
+  background: #26c5e0;
+  background: -webkit-linear-gradient(left, #26c5e0, #e6e9be);
+  background: -o-linear-gradient(right, #26c5e0, #e6e9be);
+  background: -moz-linear-gradient(right, #26c5e0, #e6e9be);
+  background: linear-gradient(to right, #26c5e0, #e6e9be);
+
+}
+
+@media (min-width: 450px) {
+  .container {
+    width: 400px;
+    margin: auto;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(106,214,213,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(106,214,213,1);
+    box-shadow: 3px 3px 5px 0px rgba(106,214,213,1);
+  }
+}
+
+.blueHeader {
+  background: #2876b1;
+  padding: 5px;
+  overflow: auto;
+}
+
+h4 {
+  margin: 0;
+  padding: 5px;
+  float: left;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+button {
+  float: right;
+  padding-top: 2px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
+input {
+  background: #f6f5f7;
+  border: none;
+  width: 100%;
+  line-height: 2.5;
+  padding-left: 10px;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #2876b1;
+  background: #fffeff;
+  color: #2876b1
+}
+
+p {
+  color: #767577;
+  margin: 0;
+  background: #fffeff;
+  line-height: 2.5;
+  padding-left: 5px;
+}
+.lineThrough {
+  text-decoration: line-through;
+  opacity: 0.5;
+  background: #fffeff;
+}
+
+span {
+  display: none;
+  margin-right: 5px;
+  margin-left: -5px;
+  padding: 10px;
+  border: 1px solid #d53337;
+  background: #d53337;
+  color: #fffeff;
+  cursor: pointer;
+}
+.spanOn {
+  display: inline;
+}

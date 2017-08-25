@@ -1,0 +1,51 @@
+{
+  "name": "todo-list-project",
+  "version": "1.0.0",
+  "description": "Todo List Project",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack-dev-server --colors --open",
+    "prod": "cross-env NODE_ENV=production PLATFORM=web webpack -p",
+    "preprod": "rimraf ./public/*",
+    "api": "node ./src/js/apiServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adinamatei/TodoList.git"
+  },
+  "author": "Adina Matei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adinamatei/TodoList/issues"
+  },
+  "homepage": "https://github.com/adinamatei/TodoList#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "body-parser": "^1.17.2",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.4",
+    "express": "^4.15.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^3.3.1",
+    "imports-loader": "^0.7.1",
+    "node-sass": "^4.5.3",
+    "resolve-url-loader": "^2.1.0",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.2",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
+  }
+}
