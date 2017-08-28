@@ -1,13 +1,22 @@
 // check or uncheck todo
-$("p").on("click", function() {
+$(".items").on("click", "p", function() {
   $(this).toggleClass("lineThrough");
 });
 
+//delete todos on click
+$(".items").on("click", "span", function(event){
+  event.stopPropagation();
+  $(this).parent().slideDown(function() {
+    $(this).remove();
+  });
+});
+
+
 // on hover show the trash icon
-$("p").on("mouseenter", function() {
+$(".items").on("mouseenter", "p", function() {
   $(this).find("span").addClass("spanOn");
 });
-$("p").on("mouseleave", function() {
+$(".items").on("mouseleave", "p", function() {
   $(this).find("span").removeClass("spanOn");
 });
 
@@ -19,7 +28,7 @@ $("p").each(function(){
 
 //when chick on + show/hide the add input
 $("button").on("click", function(){
-  $("input").slideToggle();
+  $("input[type=text]").fadeToggle();
 });
 
 // add new todos
@@ -31,23 +40,10 @@ $("input[type=text]").on("keypress", function(event){
     // add new element and put todos class
     var newElement = $("<p />").text(inputTodos).addClass("todos");
     var span = '<span><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></span>';
-    newElement.prepend(span);
     // var newElement = "<p><span>X </span>" + inputTodos + "</p>";
     // var newElement = $("<p></p>").text(inputTodos).addClass("todos");
     // var newElement = $("<p />", {class: "todos", text: inputTodos});
-
-
-   //add event listener to new elements
-    newElement.on("click", function() {
-      $(this).toggleClass("lineThrough");
-    });
-
-    newElement.on("mouseenter", function() {
-      $(this).find("span").addClass("spanOn");
-    });
-    newElement.on("mouseleave", function() {
-      $(this).find("span").removeClass("spanOn");
-    });
+    newElement.prepend(span);
 
     //add the new element at the end of list
     $(".items").append(newElement);
@@ -61,22 +57,8 @@ $("input[type=text]").on("keypress", function(event){
       $("p:odd").css("background", "#f6f5f7");
     });
 
-    //delete todos on click
-    $("span").click(function(event){
-      event.stopPropagation();
-      $(this).parent().slideDown(function() {
-        $(this).remove();
-      });
-    });
   }
 });
 
 
-//delete todos on click
-$("span").click(function(event){
-  event.stopPropagation();
-  $(this).parent().slideDown(function() {
-    $(this).remove();
-  });
-});
 

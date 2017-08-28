@@ -5,6 +5,7 @@
 body {
   padding-top: 5%;
   background: #26c5e0;
+  font-family: 'Roboto', sans-serif;
   background: -webkit-linear-gradient(left, #26c5e0, #e6e9be);
   background: -o-linear-gradient(right, #26c5e0, #e6e9be);
   background: -moz-linear-gradient(right, #26c5e0, #e6e9be);
@@ -14,7 +15,7 @@ body {
 
 @media (min-width: 450px) {
   .container {
-    width: 400px;
+    width: 360px;
     margin: auto;
     -webkit-box-shadow: 3px 3px 5px 0px rgba(106,214,213,1);
     -moz-box-shadow: 3px 3px 5px 0px rgba(106,214,213,1);
@@ -25,6 +26,7 @@ body {
 .blueHeader {
   background: #2876b1;
   padding: 5px;
+  height: 40px;
   overflow: auto;
 }
 
@@ -34,6 +36,7 @@ h4 {
   float: left;
   text-transform: uppercase;
   color: #ffffff;
+  font-weight: normal;
 }
 button {
   float: right;
@@ -54,6 +57,7 @@ input {
   width: 100%;
   line-height: 2.5;
   padding-left: 10px;
+  height: 40px;
 }
 input:focus {
   outline: none;
@@ -63,6 +67,7 @@ input:focus {
 }
 
 p {
+  height: 40px;
   color: #767577;
   margin: 0;
   background: #fffeff;

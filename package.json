@@ -4,6 +4,7 @@
   "description": "Todo List Project",
   "main": "app.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "webpack-dev-server --colors --open",
     "prod": "cross-env NODE_ENV=production PLATFORM=web webpack -p",
     "preprod": "rimraf ./public/*",
