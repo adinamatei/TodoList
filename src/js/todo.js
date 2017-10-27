@@ -20,13 +20,13 @@ $(".items").on("mouseleave", "p", function() {
   $(this).find("span").removeClass("spanOn");
 });
 
-// alternate row colors
+// alternate row background
 $("p").each(function(){
   $("p:even").css("background", "#fffeff");
   $("p:odd").css("background", "#f6f5f7");
 });
 
-//when chick on + show/hide the add input
+//when click on + show/hide the add input
 $("button").on("click", function(){
   $("input[type=text]").fadeToggle();
 });
