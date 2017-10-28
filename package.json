@@ -7,7 +7,7 @@
     "start": "npm run dev",
     "dev": "webpack-dev-server --colors --open",
     "prod": "cross-env NODE_ENV=production PLATFORM=web webpack -p",
-    "preprod": "rimraf ./public/*",
+    "preprod": "rimraf ./public/* && rimraf ./index.html",
     "api": "node ./src/js/apiServer.js"
   },
   "repository": {

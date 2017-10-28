@@ -22,7 +22,7 @@ module.exports = {
   // devtool: 'source-map',
   output: {
       path: path.resolve(__dirname, 'public'),
-      // publicPath: '/public/',
+      publicPath: './public/',
       filename: "js/[name].bundle.js"
   },
   devServer: {
@@ -56,11 +56,11 @@ module.exports = {
       },
       {
         test: /\.(woff2?|svg)$/,
-        loader: 'url-loader?limit=10000&name=fonts/[name].[ext]'
+        loader: 'url-loader?limit=100000&name=/fonts/[name].[ext]'
       },
       {
         test: /\.(ttf|eot)$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
+        loader: 'file-loader?name=/fonts/[name].[ext]'
       },
     ]
   },
@@ -69,12 +69,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Home Page',
       hash: true,
-      filename: 'index.html',
+      filename: '../index.html',
       template: './src/index.html',
     }),
 
     new ExtractTextPlugin({
-      filename: "/css/[name].css",
+      filename: "css/[name].css",
       disable: !isProd,
       allChunks: true
     }),
