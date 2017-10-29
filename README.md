@@ -18,5 +18,5 @@ This is a TODO app based on jQuery and my [Webpack Boilerplate](https://github.c
 * Run:
 `npm start`
 
-or click the link:
+## Demo
 [https://adinamatei.github.io/TodoList/](https://adinamatei.github.io/TodoList/)
